@@ -13,7 +13,7 @@ const Navbar = () => {
   const navigationItems = [
     { label: 'HOME', href: '/' },
     { label: 'ABOUT', href: '/about-us' },
-    { label: 'PROJECTS', href: '/communities' },
+    { label: 'PROJECTS', href: '/projects' },
     { label: 'CONTACT', href: '#contact' },
   ];
 

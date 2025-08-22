@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
 
   // Function to navigate to communities page
   const handleViewAllCommunities = () => {
-    navigate('/communities')
+    navigate('/projects')
   }
 
   const communities = [
@@ -157,7 +157,7 @@ const FeaturedProjects = () => {
             <div className='mt-6 lg:mt-10 text-center'>
               <button 
                 onClick={handleViewAllCommunities} 
-                className='text-whiteRock px-6 lg:px-10 py-3 lg:py-4 rounded-lg hover:bg-whiteRock hover:text-mineShaft transition-colors duration-300 font-medium text-base lg:text-lg bg-[akaroa]'
+                className='text-whiteRock px-6 lg:px-10 py-3 lg:py-4 rounded-lg hover:bg-whiteRock hover:text-mineShaft transition-colors duration-300 font-medium text-base lg:text-lg bg-[akaroa] font-serifRegular'
               >
                 View All Communities
               </button>

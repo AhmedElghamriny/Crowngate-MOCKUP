@@ -6,8 +6,6 @@ import FeaturedProjects from './FeaturedProjects'
 import Hero from './Hero'
 
 const LandingMain = () => {
-  const [currentSection, setCurrentSection] = useState(0)
-  const sections = ['hero', 'about', 'projects', 'contact']
   const lenisRef = useRef<Lenis | null>(null)
 
   // Initialize Lenis for smooth scrolling
@@ -38,33 +36,6 @@ const LandingMain = () => {
       lenisRef.current?.destroy()
     }
   }, [])
-
-  // Improved section tracking based on actual section positions
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2 // Check middle of viewport
-
-      sections.forEach((sectionId, index) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          const elementTop = rect.top + window.scrollY
-          const elementBottom = elementTop + rect.height
-
-          // Check if the middle of the viewport is within this section
-          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-            if (currentSection !== index) {
-              setCurrentSection(index)
-            }
-          }
-        }
-      })
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll() // Run once on mount
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [currentSection, sections])
 
   return (
   <div className="ml-16 md:ml-20">

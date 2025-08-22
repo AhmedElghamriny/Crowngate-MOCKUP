@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import './index.css';
 
-import { Landing, Communities } from './pages';
+import { Landing, Communities, AboutUs } from './pages';
 // Import other pages as needed
 // import { Communities, Contact, About, Projects } from './pages';
 
@@ -14,8 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/about-us" element={<Communities />} />
-          <Route path="/communities" element={<Communities />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/projects" element={<Communities />} />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </div>
